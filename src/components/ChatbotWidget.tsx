@@ -1,8 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 import ChatSupport from "./chat/chat-support";
 
 export default function ChatbotWidget() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   return (
     // <div className="fixed bottom-4 right-4 z-[9999]">
