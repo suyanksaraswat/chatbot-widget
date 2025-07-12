@@ -74,12 +74,10 @@ export default function ChatSupport() {
   return (
     <ExpandableChat size="md" position="bottom-right">
       <ExpandableChatHeader className="bg-muted/60 flex-col justify-center">
-        <div className="flex items-center justify-between gap-1">
-          <h1 className="text-xl font-semibold">Frido AI</h1>
-          <div className="flex items-center">
-            <Dot className="text-green-600" />
-            <p className="text-xs">Online</p>
-          </div>
+        <h1 className="text-xl font-semibold">Frido AI</h1>
+        <div className="flex items-center">
+          <Dot className="text-green-600 -ml-2" />
+          <p className="text-xs">Online</p>
         </div>
       </ExpandableChatHeader>
       <ExpandableChatBody>
