@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -15,16 +14,11 @@ export default defineConfig({
       entry: "src/main.tsx",
       name: "ChatbotWidget",
       fileName: "chatbot-widget",
-      formats: ["iife"], // embeddable <script>
+      formats: ["iife"], // For <script>
     },
     rollupOptions: {
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
-      },
-      external: ["react", "react-dom"], // avoid bundling React
+      // DO NOT mark react/react-dom as external
+      // This includes everything in the bundle
     },
   },
   define: {
