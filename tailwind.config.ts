@@ -4,7 +4,11 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  safelist: [{ pattern: /./ }],
+  safelist: [
+    {
+      pattern: /[a-zA-Z0-9-_:/[\].]+/, // very wide match, covers 99%
+    }
+  ],
   theme: {
     container: {
       center: true,
