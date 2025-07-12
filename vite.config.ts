@@ -12,10 +12,22 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: 'src/main.tsx',
-      name: 'ChatbotWidget',
-      fileName: 'chatbot-widget',
-      formats: ['iife'], // usable via <script>
+      entry: "src/main.tsx",
+      name: "ChatbotWidget",
+      fileName: "chatbot-widget",
+      formats: ["iife"], // embeddable <script>
     },
+    rollupOptions: {
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+      },
+      external: ["react", "react-dom"], // avoid bundling React
+    },
+  },
+  define: {
+    "process.env.NODE_ENV": JSON.stringify("production"),
   },
 });
