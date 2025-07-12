@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import ChatbotWidget from "./components/ChatbotWidget";
+import "@/styles/globals.css";
 
 // Inject Tailwind CDN dynamically
 function loadTailwindCDN(callback: () => void) {
