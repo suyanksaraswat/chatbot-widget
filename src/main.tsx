@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import ChatbotWidget from "./components/ChatbotWidget";
 import "@/styles/globals.css";
 
-// Inject Tailwind CDN dynamically
-function loadTailwindCDN(callback: () => void) {
-  const script = document.createElement("script");
-  script.src = "https://cdn.tailwindcss.com";
-  script.onload = () => callback();
-  document.head.appendChild(script);
-}
+// // Inject Tailwind CDN dynamically
+// function loadTailwindCDN(callback: () => void) {
+//   const script = document.createElement("script");
+//   script.src = "https://cdn.tailwindcss.com";
+//   script.onload = () => callback();
+//   document.head.appendChild(script);
+// }
 
 // Inject the widget container if it doesn't exist
 const containerId = "chatbot-widget-root";
@@ -31,4 +31,4 @@ function injectWidget() {
 }
 
 // 🧠 Load Tailwind, then render the widget
-loadTailwindCDN(injectWidget);
+injectWidget();
