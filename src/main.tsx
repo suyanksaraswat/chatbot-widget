@@ -4,15 +4,6 @@ import ChatbotWidget from "./components/ChatbotWidget";
 
 // Inject Tailwind CDN dynamically
 function loadTailwindCDN(callback: () => void) {
-  // If already injected, just call back
-  if (
-    window.tailwind !== undefined ||
-    document.querySelector('script[src*="cdn.tailwindcss.com"]')
-  ) {
-    callback();
-    return;
-  }
-
   const script = document.createElement("script");
   script.src = "https://cdn.tailwindcss.com";
   script.onload = () => callback();
