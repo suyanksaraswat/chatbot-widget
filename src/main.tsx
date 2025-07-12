@@ -5,10 +5,11 @@ import "@/styles/globals.css";
 
 // Inject Tailwind CDN dynamically
 function loadTailwindCDN(callback: () => void) {
-  const script = document.createElement("script");
-  script.src = "https://cdn.tailwindcss.com";
-  script.onload = () => callback();
-  document.head.appendChild(script);
+  // const script = document.createElement("script");
+  // script.src = "https://cdn.tailwindcss.com";
+  // script.onload = () => callback();
+  // document.head.appendChild(script);
+  callback();
 }
 
 // Inject the widget container if it doesn't exist
